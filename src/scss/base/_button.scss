@@ -1,0 +1,118 @@
+.booking-btn {
+    color: white;
+    background-color: $primary;
+    height: 60px;
+    font-family: $font-family-sans-serif-bold;
+    font-size: $font-size-lg * 1.4;
+    z-index: 4;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    text-decoration: none;
+    transition: .25s ease-in-out;
+    letter-spacing: 0;
+    padding: 0 2rem;
+    overflow: visible;
+    line-height: 2.8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    text-align: center;
+    font-size: $font-size-lg;
+    @include media-breakpoint-up(md) {
+        width: 100%;
+        max-width: 200px;
+        font-size: $font-size-lg * 1.4;
+        line-height: 2.1;
+    }
+    &:hover {
+        color: $primary;
+        text-decoration: none;
+        background-color: white;
+    }
+}
+
+.button-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid #EC2420;
+    font-weight: 300;
+    font-size: $font-size-lg * 1.5;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    font-family: $font-family-sans-serif-bold;
+    text-transform: uppercase;
+    margin: 10px auto;
+    
+    a {
+        width: 100%;
+        height: 100%;
+        border: 3px solid #EC2420;
+        box-sizing: border-box;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 8px;
+        font-size: $font-size-lg * 1.5;
+        display: flex;
+        justify-content: center;
+        transition: all 0.2s;
+        font-weight: 300;
+
+        &.button-hover {
+            background: #180604;
+            -webkit-mask: url('https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png');
+            mask: url('https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png');
+            -webkit-mask-size: 2300% 100%;
+            mask-size: 2300% 100%;
+            border: none;
+            color: white;
+            line-height: 1.7;
+        }
+        cursor: pointer;
+        -webkit-animation: ani2 0.7s steps(22) forwards;
+        animation: ani2 0.7s steps(22) forwards;
+
+        &:hover {
+            -webkit-animation: cloud 0.7s steps(22) forwards;
+            animation: cloud 0.7s steps(22) forwards;
+            color: white!important;
+        }
+    }
+}
+a:not([href]):not([tabindex]) {
+    color: white!important;
+}
+.effect {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    position: absolute;
+    overflow: hidden;
+    background: $primary;
+    padding: 8px;
+}
+@-webkit-keyframes cloud {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+@keyframes cloud {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}

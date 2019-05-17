@@ -1,0 +1,178 @@
+.main-header {
+    float: left;
+    width: 100%;
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: relative;
+    &.general {
+        h1 {
+            margin: 0;
+        }
+        .logo {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    
+    &.main-header--home {
+        min-height: initial;  
+        // }
+        .header-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-background {
+            background: #000;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -99;
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            .overlay {
+                margin: 0;
+                position: absolute;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/layout/video-overlay.png);
+                background-repeat: repeat;
+                z-index: 2;
+            }
+        }
+    }
+    .background-wrapper {
+        position: relative;
+        overflow: hidden;
+        padding-top: 0;
+        @include media-breakpoint-up(sm)  {
+            padding-top: 40px;
+        }
+        @include media-breakpoint-up(md)  {
+            padding-top: 0px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            
+        }
+        .position {
+            position: absolute;
+            top:0;
+            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .main-header__heading {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        left: 0;
+       @include media-breakpoint-up(sm)  {
+            max-width: 400px;
+            left: initial;
+            height: 100%;
+        }
+        .main-header__logo {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            &:after {
+                content:"";
+                position: absolute;
+                top: 0;
+                left:0;
+                height:100%;
+                width: 100%;
+                background-size: 100%;
+                background-repeat: no-repeat;
+
+                //Mobile
+                background-image: url(../images/layout/mobile-logo.png);
+
+                //Tablet
+                @include media-breakpoint-up(xs){
+                    background-image: url(../images/layout/tablet-logo.png);
+                }
+                //Desktop
+               @include media-breakpoint-up(sm)  {
+                    background-image: url(../images/layout/desktop-logo.png);
+                }
+            }
+            &.main-header__logo--wide {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.down {
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+
+.scroll {
+    padding-top: 30px;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  
+   i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    -webkit-animation: scroll 1.5s infinite;
+    animation: scroll 1.5s infinite;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform:  translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform:  translate(0, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes scroll {
+    0% {
+      transform:  translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform:  translate(0, 20px);
+      opacity: 0;
+    }
+  }
+}

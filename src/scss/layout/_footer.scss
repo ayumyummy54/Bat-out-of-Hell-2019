@@ -1,0 +1,40 @@
+.main-footer {
+    background-color: black;
+    padding: 0 0 $grid-gutter-width 0;
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    padding: $grid-gutter-width * 2 0;
+ #home & {
+     padding-top: $grid-gutter-width;
+ }
+    a {
+        color: white;
+ }
+
+    .social {
+        padding-top: 0;
+        margin: 10px 10px 15px;
+        a {
+            color: white;
+            transition: all 0.3s;
+            padding: 0 1rem;
+            font-size: 26px;
+            
+            @include media-breakpoint-up(sm) {
+                padding: 0 2rem;
+            }
+
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-lg * 1.7;
+            }
+
+            &:hover,
+            &:focus {
+                color: $primary;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

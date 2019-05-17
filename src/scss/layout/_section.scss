@@ -1,0 +1,160 @@
+
+// .contain {
+//     position: relative;
+// }
+
+// .content {
+//     padding: $grid-gutter-width 0;
+//     h2 {
+//         color: white;
+//     }
+// }
+
+// .general-section {
+//     float: left;
+//     width: 100%;
+//     position: relative;
+//     background-color:#000;
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     background-position: top left;
+//     padding: ($grid-gutter-width * 2) 0;
+//     &.home {
+//         padding-top: 0;
+//         padding-bottom: 0;
+//     }
+// }
+body {
+    background-color: black;
+}
+.bg-section {
+    // width: 100%;
+    position: relative;
+    background-color:#000;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../images/layout/section-bg.jpg);
+    padding: ($grid-gutter-width * 2) 0;
+    float: left;
+    width: 100%;
+    
+}
+.general-section {
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color:#000;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: ($grid-gutter-width * 2) 0;
+    &.home {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.general-section--with-bg {
+    @extend .general-section;
+}
+.general-section--pt-0 {
+    padding-top: 0;
+}
+
+.general-section--border-top {
+    border-top: 3px solid $primary;
+    padding-top: 0;
+}
+
+//custom collapse
+
+.custom_collapse {
+    width: 100%;
+    float: left;
+    font-size: 0;
+    padding: $grid-gutter-width 0;
+    text-align: center;
+    .custom_collapse_item {
+        display: inline-block;
+        width: 50%;
+        padding: 0 $grid-gutter-width / 2;
+        @include media-breakpoint-up(sm) {
+            width: 25%;
+        }
+        .custom_collapse_button {
+            border: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            background-color: transparent;
+            margin-bottom: 80px;
+            display: block;
+            height: auto;
+            position: relative;
+            &:focus {
+                outline: 0;
+            }
+            img {
+                border: 1px solid white;
+                width: 100%;
+                transition: all 0.3s;
+            }
+            &:hover {
+                img {
+                    border-color: $primary;
+                }
+            }
+            .custom_collapse_name-container {
+                float: left;
+                width: 100%;
+                h3 {
+                    margin-bottom: 0;
+                    color: white;
+                }
+                h4 {
+                    color: $link-color;
+                    margin-top: 0;
+                }
+            }
+        }
+        .custom_collapse_content {
+            // height: 0;
+            display: none;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.8s ease-in-out;
+            font-size: $font-size-base;
+            left: 0;
+            width: 100%;
+            padding: $grid-gutter-width;
+            margin-top: 20px;
+            &:after, &:before {
+                content: '';
+                position: absolute;
+                top: -1px;
+                height: 1px;
+                // width: 100%;
+                background-color: $primary;
+                left: $grid-gutter-width;
+                right: $grid-gutter-width;
+            }
+            // &:before {
+            // 	right: $grid-gutter-width;
+            // }
+        }
+        &.active {
+            .custom_collapse_button {
+                img {
+                    border-color: $primary;
+                }
+                .custom_collapse_name-container {
+                    border-color: $primary;
+                }
+            }
+            .custom_collapse_content {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}

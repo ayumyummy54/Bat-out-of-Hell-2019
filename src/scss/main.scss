@@ -1,0 +1,19 @@
+// Vendors
+@import 'vendor/bootstrap/bootstrap';
+@import 'vendor/lightgallery';
+@import 'vendor/swiper';
+// Base
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/helpers';
+@import 'base/typography';
+@import 'base/button';
+
+// Layout
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/footer';
+@import 'layout/section';
+@import 'layout/media';
+
+// Components

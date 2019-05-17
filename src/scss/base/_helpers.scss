@@ -1,0 +1,165 @@
+.btn-primary {
+    border: 3px solid #EC2420;
+    box-sizing: border-box;
+    color: white;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    font-weight: 800;
+    font-family: "ProximaNovaExtraCondens1529447";
+    font-size: $font-size-lg * 1.5;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.2s;
+
+    &:hover {
+        border-radius: 20px;
+        border: 3px solid #EC2420;
+        color: white;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
+.btn-secondary {
+    box-sizing: border-box;
+    color: white;
+    background-color: #EC2420;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.legals {
+    color: white;
+    
+}
+
+.social-home {
+    padding-bottom: 2rem;
+
+    a {
+        color: white;
+        transition: all 0.3s;
+        padding: 0 1rem;
+        font-size: 24px;
+
+        @include media-breakpoint-up(sm) {
+            padding: 0 1.5rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: $font-size-lg * 1.7;
+        }
+
+        &:hover,
+        &:focus {
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+.cookies {
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,1);
+    z-index: 1002;
+    display: none;
+    @include media-breakpoint-up(sm) {
+        padding: 10px;
+    }
+    p {
+        text-align: center;
+        margin: 0;
+        color: white;
+        font-size: 12px;
+        @include media-breakpoint-up(sm) {
+            font-size: 14px;
+        }
+        a {
+            border-bottom: 1px solid gray;
+            text-decoration: none;
+        }
+    }
+    .btn {
+        width: 46%;
+        margin:  10px 0 0 0;
+        color: white;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: solid white 3px;
+        color: white;
+        @include media-breakpoint-up(sm) {
+            width: auto;
+            margin: 10px 0 10px 10px;
+        }
+        &.btn-transparent {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+}
+.close {
+    color: #f84820;
+    text-decoration: none;
+    text-shadow: none;
+    float: none;
+    text-align: center;
+    opacity: 1;
+    font-weight: 100;
+    font-size: 14px;
+    &:hover {
+        color: white;
+    }
+}
+
+.awards-logo {
+    margin-bottom: $grid-gutter-width / 2;
+    margin-top: $grid-gutter-width / 2;
+    @include media-breakpoint-up(sm) {
+        margin-top: $grid-gutter-width *2;
+        margin-bottom: $grid-gutter-width;
+    }
+}
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 100px auto 30px;
+    @include media-breakpoint-up(sm) {
+        margin: 30px auto;
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+    .modal-content {
+        background-color: transparent;
+    }
+    .modal-body {
+        position:relative;
+        padding:0px;
+        }
+    .close {
+        position:absolute;
+        right:0px;
+        top:-30px;
+        z-index:999;
+        font-size:2rem;
+        font-weight: normal;
+        color:#fff;
+        opacity:1;
+        @include media-breakpoint-up(sm) {
+            right:-30px;
+            top: 0;
+        }
+    }
+}
+
+
+

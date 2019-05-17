@@ -1,0 +1,21 @@
+Sitemap: https://batoutofhellmusical.com/sitemap.xml
+Sitemap: https://batoutofhellmusical.com/ror.xml
+
+User-agent: Googlebot
+User-agent: Slurp
+User-agent: msnbot 
+User-agent: Mediapartners-Google*
+User-agent: Googlebot-Image 
+User-agent: Yahoo-MMCrawler
+User-agent: Twitterbot
+
+Disallow: 
+
+
+User-agent: *
+
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /eshots/
+Disallow: /html-email/
+Disallow: /html-emails/

@@ -1,0 +1,232 @@
+
+.navbar-toggler {
+    z-index: 999;
+    color: white;
+    background-color:rgba(0, 0, 0, 1);
+    z-index: 99999;
+    height: 60px;
+    font-size: $font-size-lg * 1.4;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    text-decoration: none;
+    transition: .25s ease-in-out;
+    letter-spacing: 0;
+    padding: 0 1rem;
+    overflow: visible;
+    line-height: 2.1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    .toggle::after {
+       content: 'MENU';
+       font-weight: 100;
+       font-size: $font-size-base;
+       letter-spacing: 2px;
+       top: 50%;
+       left: 50%;
+       padding: 0;
+       transform: translate(-50%, -50%);
+       position: absolute;
+    }
+    .open::after {
+       content: 'CLOSE';
+       font-weight: 100;
+       font-size: $font-size-base;
+       letter-spacing: 2px;
+       top: 50%;
+       left: 50%;
+       padding: 0;
+       transform: translate(-50%, -50%);
+       position: absolute;
+
+    }
+}
+.navbar {
+    height: 60px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, .5);
+    .btn {
+        margin-left: 50px;
+    }
+}
+
+
+.toggle {
+    z-index: 3;
+    width: 30px;
+    
+    cursor: pointer;
+    position: static;
+    span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        // margin: 1em 0 0 10px;
+        background: #eee;
+        width: 30px;
+      
+    }
+   
+}
+
+
+
+.toggle span:before,
+.toggle span:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 0.1em;
+    background: #eee;
+    -webkit-transition: 350ms ease all;
+    -moz-transition: 350ms ease all;
+    transition: 350ms ease all;
+}
+
+.toggle span:before {
+   content: '';
+   position: absolute;
+   top: -10px;
+   left: 0;
+   width: 30px;
+   height: 2px;
+}
+
+.toggle span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+}
+
+.toggle.open span {
+    background-color: transparent;
+}
+
+.toggle.open span:before,
+.toggle.open span:after {
+    margin: 0;
+    background: white;
+}
+
+.toggle.open span:before {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 0;
+
+}
+
+.toggle.open span:after {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    top: 0;
+}
+
+.menu {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, .9);
+    transition: 350ms ease all;
+    @include media-breakpoint-up(md) {
+        opacity: 1;
+        visibility: visible;
+        height: 60px;
+        background: transparent;
+    }
+    &.opened {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0 auto;
+    z-index: 200;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @include media-breakpoint-up(md) {
+        text-align: left;
+    }
+    @include media-breakpoint-up(lg) {
+        list-style: none;
+        margin: 0 auto;
+        z-index: 200;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
+    li {
+        display: block;
+        // width: 90%;
+        height: 65px;
+        margin: 0 auto 1em;
+        @include media-breakpoint-up(md) {
+            display: inline-block;
+            margin: 0 .8em;
+        }
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            margin: 0 1em;
+        }
+        @include media-breakpoint-up(xl) {
+            margin: 0 2em;
+        }
+     
+        a {
+            position: relative;
+            z-index: 4;
+            display: block;
+            width: 100%;
+            height: 65px;
+            line-height: 65px;
+            margin: 0 auto;
+            color: white;
+            
+            text-decoration: none;
+            font-size: $h2-font-size;
+            letter-spacing: 2px;
+            transition: 0.25s ease-in-out;
+            color: white;
+            overflow: visible;
+            @include media-breakpoint-up(md) {
+                font-size: $font-size-lg *0.8;
+            }
+            &:hover {
+                color: $primary;
+            }
+
+            i {
+                position: absolute;
+                padding: 0 1.25em 0 0;
+                font-size: 2em;
+            }
+           
+        }
+    }
+}
+
