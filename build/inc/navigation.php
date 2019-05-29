@@ -12,7 +12,7 @@
 			<!-- <li><a href="<?php echo $root; ?>cast-and-creative/" <?php if ($page == "cast-and-creative.php") echo "class='active'"; ?>>Cast &amp; Creative</a></li> -->
 			<li><a href="<?php echo $root; ?>about/" <?php if ($page == "about.php") echo "class='active'"; ?>>About the show</a></li>
 			<li><a href="<?php echo $root; ?>media/" <?php if ($page == "media.php") echo "class='active'"; ?>>Media</a></li>
-			
+			<li><a href="https://batoutofhellmusical.shop.musictoday.com/store/" target="_blank">Store</a></li>
 		</ul>
 	</div>
 	<div>
